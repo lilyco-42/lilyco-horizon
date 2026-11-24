@@ -121,10 +121,15 @@ pub struct BoneTrack {
     pub scale: Option<Channel>,
 }
 
+pub const LOOP_ONCE: u8 = 0;
+pub const LOOP_REPEAT: u8 = 1;
+pub const LOOP_HOLD_LAST: u8 = 2;
+
 #[derive(Clone, Debug)]
 pub struct AnimClip {
     pub name: String,
     pub looping: bool,
+    pub loop_mode: u8,
     pub length: f32,
     pub bones: HashMap<String, BoneTrack>,
 }
@@ -153,10 +158,14 @@ pub fn parse_bedrock_animations(json_str: &str) -> Result<HashMap<String, AnimCl
     let raw: RawAnimFile = serde_json::from_str(json_str)?;
     let mut out = HashMap::new();
     for (name, anim) in raw.animations.unwrap_or_default() {
-        let looping = match anim.loop_val {
-            Some(Value::Bool(b)) => b,
-            Some(Value::String(ref s)) => s.eq_ignore_ascii_case("true"),
-            _ => false,
+        let (looping, loop_mode) = match anim.loop_val {
+            Some(Value::Bool(true)) => (true, LOOP_REPEAT),
+            Some(Value::Bool(false)) => (false, LOOP_ONCE),
+            Some(Value::String(ref s)) if s.eq_ignore_ascii_case("true") => (true, LOOP_REPEAT),
+            Some(Value::String(ref s)) if s.eq_ignore_ascii_case("hold_on_last_frame") => {
+                (false, LOOP_HOLD_LAST)
+            }
+            _ => (false, LOOP_ONCE),
         };
         let mut bones = HashMap::new();
         for (bname, bt) in anim.bones.unwrap_or_default() {
@@ -174,6 +183,7 @@ pub fn parse_bedrock_animations(json_str: &str) -> Result<HashMap<String, AnimCl
             AnimClip {
                 name,
                 looping,
+                loop_mode,
                 length: anim.animation_length.unwrap_or(1.0).max(0.001),
                 bones,
             },
