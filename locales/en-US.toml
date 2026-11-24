@@ -1,0 +1,55 @@
+[meta]
+code = "en-US"
+label = "English (US)"
+
+[gui]
+app_title = "Lilyco Horizon Studio"
+app_subtitle = "YSM Models · Litematica Schematics · Mods & i18n Control Plane"
+tab_ysm = "YSM Models"
+tab_schematics = "Schematics"
+tab_mods = "Mods"
+tab_i18n = "Mod i18n"
+status_online = "Horizon Daemon Online"
+status_offline = "Disconnected"
+btn_refresh = "Refresh"
+btn_apply = "Apply Now"
+btn_sync_i18n = "Sync Mod Locales"
+btn_import_lyco = "Import Desktop LYCO Model"
+label_active = "Active"
+label_idle = "Idle"
+label_enabled = "Enabled"
+label_disabled = "Disabled"
+
+[mods.lilyco_i18n]
+"key.lilyco_i18n.cycle_locale" = "Lilyco i18n: Cycle Language (zh-CN / en-US)"
+"lilyco_i18n.setting.locale" = "Active Mod Locale Pack"
+"lilyco_i18n.hud.reloaded" = "Reloaded external Lilyco TOML locale pack"
+
+[mods.ysm_models]
+"key.ysm_models.switch_model" = "YSM Engine: Switch 3D Character Model (Y)"
+"key.ysm_models.gesture_wheel" = "YSM Engine: Gesture & Expression Wheel (G)"
+"ysm_models.setting.persona" = "Active Persona Preset"
+"ysm_models.setting.gesture" = "Active Idle Gesture"
+"ysm_models.hud.synced" = "YSM multiplayer state synchronized"
+
+[mods.schematics]
+"key.schematics.cycle_blueprint" = "Litematica: Cycle Schematic Blueprint (M)"
+"key.schematics.toggle_layer" = "Litematica: Toggle Layer Slice Mode (N)"
+"key.schematics.layer_up" = "Litematica: Layer Up (PgUp)"
+"key.schematics.layer_down" = "Litematica: Layer Down (PgDn)"
+"key.schematics.toggle_ghost" = "Litematica: Toggle Ghost Overlay (V)"
+"schematics.setting.blueprint" = "Active Blueprint"
+"schematics.setting.layer_mode" = "Layer Slice Mode"
+"schematics.setting.mirror" = "Mirror Flip"
+"schematics.setting.ghost_render" = "Ghost Block Overlay"
+
+[mods.replay_recorder]
+"key.replay_recorder.toggle_rec" = "ReplayMod: Toggle Recording / Cloud Sync (R)"
+"key.replay_recorder.add_keyframe" = "ReplayMod: Add Camera Keyframe (B)"
+"replay_recorder.setting.mode" = "Replay & Dual-POV Recording Mode"
+"replay_recorder.setting.segment_seconds" = "Video Segment Duration"
+"replay_recorder.setting.disk_guard" = "Disk Free-Space Guard"
+"replay_recorder.setting.purge_policy" = "Post-Upload Cleanup Policy"
+
+[mods.skins_3d]
+"skins_3d.setting.reach" = "3D Skin Render Distance"

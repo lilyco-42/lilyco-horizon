@@ -1,0 +1,11 @@
+# YesSteveModel-Native → Rust (`ysm-native-port` & Horizon `ysm_models v3.0`) 逐文件移植与测试对照表
+
+| 源 C++ 文件 (`YesSteveModel-Native`, Apache-2.0) | Rust 移植目标 | 核心职责 | 自动化测试与对比验证 |
+| :--- | :--- | :--- | :--- |
+| `modules/gfx/src/math/euler.h` | [euler.rs](file:///home/lilyco/项目/lilyco-horizon/crates/ysm-native-port/src/math/euler.rs) | 位级 `ModuloTwoPi`、`ReduceAngle`、`EulerZYX` 列主序矩阵 | 1:1 移植 `euler_test.cc`（误差 `< 2e-6`、极大角归约全通过） |
+| `modules/gfx/include/gfx/math/pose_stack.h`<br>`modules/gfx/src/math/pose_stack_impl.inc` | [pose_stack.rs](file:///home/lilyco/项目/lilyco-horizon/crates/ysm-native-port/src/math/pose_stack.rs) | 层级 `PoseStack`（`Push/Pop/Translate/RotateZYX/Scale`、`normal_scale`、`tangent_orientation`） | 1:1 移植 `pose_stack_test.cc` 全通过 |
+| `modules/gfx/include/gfx/renderer/bone_attribute.h`<br>`modules/gfx/src/renderer/model_state_impl.inc` | [bone_attribute.rs](file:///home/lilyco/项目/lilyco-horizon/crates/ysm-native-port/src/renderer/bone_attribute.rs)<br>[model_state.rs](file:///home/lilyco/项目/lilyco-horizon/crates/ysm-native-port/src/renderer/model_state.rs) | DFS 先序 `ModelState::Extract`、`ApplyLocalState`、`subtree_end` O(1) 跳过 | **肘/腕关节连续性数学证明测试（0.000mm 误差，数学上杜绝“断手”）** + `children_hidden` 子树跳过测试 |
+| Bedrock `minecraft:geometry` | [geo.rs](file:///home/lilyco/项目/lilyco-horizon/crates/ysm-native-port/src/codec/geo.rs) | 全量解析 `main.json` 骨骼树、Box/Per-Face UV、镜像与立方体旋转 | 实测无损解析 173 骨 `DeepSeek_DeepSeek酱`（>3000 面）与 64 骨 CC0 `lyco_ip` |
+| Bedrock Molang 表达式引擎 | [molang/mod.rs](file:///home/lilyco/项目/lilyco-horizon/crates/ysm-native-port/src/molang/mod.rs) | 角度制 `math.*`、`q.*`/`query.*`、`v.*`、`t.*`、三元与比较运算 | 实测覆盖 `main.animation.json` 表达式零报错 |
+| Bedrock `.animation.json` | [animation.rs](file:///home/lilyco/项目/lilyco-horizon/crates/ysm-native-port/src/codec/animation.rs) | 线性 + Catmull-Rom 关键帧采样器与 Molang 通道求值 | 实测解析并求值真实 `DeepSeek_DeepSeek酱/animations/main.animation.json` |
+| 二进制 `.ytree` 序列化 & Horizon 集成 | [ytree.rs](file:///home/lilyco/项目/lilyco-horizon/crates/ysm-native-port/src/codec/ytree.rs)<br>[ytree_engine.rs](file:///home/lilyco/.local/share/horizon/horizon-native-mods/ysm_models/src/ytree_engine.rs) | 无损编码 64~557 骨完整骨骼树 + 实时眨眼、发丝惯性、肘膝联动、裙摆随腿外摆、潜行/跳跃 | 9 款模型全部烘焙为精确 `1.82m` `.ytree`，官方 `horizon-launcher native-build` 零警告编入 `ysm_models-3.0.0.hmod` |

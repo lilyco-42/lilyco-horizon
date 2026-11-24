@@ -1,0 +1,5 @@
+{
+  "key.lilyco_i18n.cycle_locale": "Lilyco i18n：切换语言 (zh-CN / en-US)",
+  "lilyco_i18n.setting.locale": "当前 Mod 语言包",
+  "lilyco_i18n.hud.reloaded": "已热重载 Lilyco 外部 TOML 语言包"
+}

@@ -1,0 +1,55 @@
+[meta]
+code = "zh-CN"
+label = "简体中文"
+
+[gui]
+app_title = "Lilyco Horizon 控制台"
+app_subtitle = "YSM 角色 · Litematica 投影 · Mod 与 i18n 统一工作台"
+tab_ysm = "YSM 角色模型"
+tab_schematics = "Litematica 投影"
+tab_mods = "Mod 管理"
+tab_i18n = "Mod i18n 词典"
+status_online = "Horizon 守护进程在线"
+status_offline = "连接断开"
+btn_refresh = "刷新状态"
+btn_apply = "立即生效"
+btn_sync_i18n = "一键同步 Mod 汉化"
+btn_import_lyco = "导入桌面 LYCO 模型"
+label_active = "当前激活"
+label_idle = "未激活"
+label_enabled = "已启用"
+label_disabled = "已禁用"
+
+[mods.lilyco_i18n]
+"key.lilyco_i18n.cycle_locale" = "Lilyco i18n：切换语言 (zh-CN / en-US)"
+"lilyco_i18n.setting.locale" = "当前 Mod 语言包"
+"lilyco_i18n.hud.reloaded" = "已热重载 Lilyco 外部 TOML 语言包"
+
+[mods.ysm_models]
+"key.ysm_models.switch_model" = "YSM 角色引擎：打开/切换 3D 角色模型 (Y)"
+"key.ysm_models.gesture_wheel" = "YSM 角色引擎：动作表情轮盘 (G)"
+"ysm_models.setting.persona" = "当前角色预设"
+"ysm_models.setting.gesture" = "当前待机动作"
+"ysm_models.hud.synced" = "YSM 多人模型状态已同步"
+
+[mods.schematics]
+"key.schematics.cycle_blueprint" = "Litematica 投影：切换蓝图 (M)"
+"key.schematics.toggle_layer" = "Litematica 投影：切换单层/全层模式 (N)"
+"key.schematics.layer_up" = "Litematica 投影：上移投影层 (PgUp)"
+"key.schematics.layer_down" = "Litematica 投影：下移投影层 (PgDn)"
+"key.schematics.toggle_ghost" = "Litematica 投影：开关半透明虚影 (V)"
+"schematics.setting.blueprint" = "当前加载蓝图"
+"schematics.setting.layer_mode" = "投影切片模式"
+"schematics.setting.mirror" = "镜像翻转"
+"schematics.setting.ghost_render" = "方块虚影渲染"
+
+[mods.replay_recorder]
+"key.replay_recorder.toggle_rec" = "录像回放：开始/停止录制并检查云端同步 (R)"
+"key.replay_recorder.add_keyframe" = "录像回放：添加镜头关键帧书签 (B)"
+"replay_recorder.setting.mode" = "录像与双视角录制模式"
+"replay_recorder.setting.segment_seconds" = "视频分段时长"
+"replay_recorder.setting.disk_guard" = "磁盘剩余空间保护阈值"
+"replay_recorder.setting.purge_policy" = "夸克网盘上传后自动清理策略"
+
+[mods.skins_3d]
+"skins_3d.setting.reach" = "3D 皮肤渲染距离"

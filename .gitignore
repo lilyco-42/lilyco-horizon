@@ -1,0 +1,22 @@
+# Build artifacts
+target/
+apps/web-gui/node_modules/
+apps/web-gui/dist/
+*.log
+*.hmod
+
+# External upstream clones & baked binary caches
+refs/
+baked_models/
+*.ytree
+*.yanim
+*.ysm
+*.bin
+
+# Secrets & local OS files
+.env
+.env.*
+*.cfg
+.DS_Store
+__pycache__/
+*.pyc

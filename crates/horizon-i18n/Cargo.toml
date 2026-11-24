@@ -1,0 +1,11 @@
+[package]
+name = "horizon-i18n"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+horizon-core = { path = "../horizon-core" }
+serde.workspace = true
+serde_json.workspace = true
+toml.workspace = true

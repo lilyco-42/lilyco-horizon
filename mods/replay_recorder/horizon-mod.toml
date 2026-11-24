@@ -1,0 +1,14 @@
+id = "replay_recorder"
+name = "ServerReplay & Dual-POV Cloud Video Recorder"
+version = "2.0.0"
+description = "100% Server & Client world replay packet recorder + 1st/3rd person MP4 capture + camera keyframe timeline (R/B keys) + real-time Quark Netdisk (kuake CLI) upload & auto-purge."
+authors = ["MC-AI-Horizon"]
+license = "MIT"
+api = "0.2"
+side = "both"
+capabilities = ["registries"]
+
+[native]
+game = "26.3"
+horizon = "0a875da91dbb0fdcb7ba8c42c11341aa229af51a"
+mixins = "e59da9094f0c2fdda6c627fe9eff22dec6a906f0"

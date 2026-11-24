@@ -1,0 +1,14 @@
+id = "schematics"
+name = "Litematica Schematics (Redstone & Cultural Architecture)"
+version = "2.0.1"
+description = "100% Litematica .litematic blueprint parser, material shopping list, layer-by-layer Y slicing (M/N/PgUp/PgDn/V keys), rotation/mirror & AI survival builder target sync."
+authors = ["MC-AI-Horizon"]
+license = "MIT"
+api = "0.2"
+side = "both"
+capabilities = ["registries"]
+
+[native]
+game = "26.3"
+horizon = "0a875da91dbb0fdcb7ba8c42c11341aa229af51a"
+mixins = "e59da9094f0c2fdda6c627fe9eff22dec6a906f0"

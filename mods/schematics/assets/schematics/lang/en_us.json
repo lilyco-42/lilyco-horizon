@@ -1,0 +1,11 @@
+{
+  "key.schematics.cycle_blueprint": "Litematica: Cycle Schematic Blueprint (M)",
+  "key.schematics.layer_down": "Litematica: Layer Down (PgDn)",
+  "key.schematics.layer_up": "Litematica: Layer Up (PgUp)",
+  "key.schematics.toggle_ghost": "Litematica: Toggle Ghost Overlay (V)",
+  "key.schematics.toggle_layer": "Litematica: Toggle Layer Slice Mode (N)",
+  "schematics.setting.blueprint": "Active Blueprint",
+  "schematics.setting.ghost_render": "Ghost Block Overlay",
+  "schematics.setting.layer_mode": "Layer Slice Mode",
+  "schematics.setting.mirror": "Mirror Flip"
+}

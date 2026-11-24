@@ -1,0 +1,11 @@
+{
+  "key.schematics.cycle_blueprint": "Litematica 投影：切换蓝图 (M)",
+  "key.schematics.layer_down": "Litematica 投影：下移投影层 (PgDn)",
+  "key.schematics.layer_up": "Litematica 投影：上移投影层 (PgUp)",
+  "key.schematics.toggle_ghost": "Litematica 投影：开关半透明虚影 (V)",
+  "key.schematics.toggle_layer": "Litematica 投影：切换单层/全层模式 (N)",
+  "schematics.setting.blueprint": "当前加载蓝图",
+  "schematics.setting.ghost_render": "方块虚影渲染",
+  "schematics.setting.layer_mode": "投影切片模式",
+  "schematics.setting.mirror": "镜像翻转"
+}

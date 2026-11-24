@@ -1,0 +1,12 @@
+[server]
+bind_addr = "127.0.0.1:28787"
+cors_origin = "*"
+
+[paths]
+horizon_dir = "/home/lilyco/.local/share/horizon"
+locales_dir = "/home/lilyco/项目/lilyco-horizon/locales"
+extra_ysm_dir = "/home/lilyco/桌面/LYCO_YSM模型"
+
+[i18n]
+default_locale = "zh-CN"
+supported = ["zh-CN", "en-US"]
