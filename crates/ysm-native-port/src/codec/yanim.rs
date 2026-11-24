@@ -120,9 +120,10 @@ fn collect_slot_clips<'a>(
             ],
         ),
         SLOT_HOLD_SHIELD => first_of(all, &["hold_mainhand:shield", "hold_offhand:shield"]),
-        SLOT_HOLD_FISHING => first_of(all, &["hold_mainhand:fishing", "hold_mainhand"]),
+        SLOT_HOLD_FISHING => first_of(all, &["hold_mainhand:fishing_rod", "hold_mainhand:fishing"]),
         SLOT_HOLD_SPEAR => first_of(all, &["hold_mainhand:spear", "hold_mainhand$minecraft:mace", "hold_mainhand:sword"]),
-        SLOT_HOLD_ITEM => first_of(all, &["hold_mainhand", "hold_mainhand:pickaxe", "hold_mainhand:sword"]),
+        // Official YSM ConditionalHold.java: plain blocks/misc items do NOT trigger tool/sword hold poses!
+        SLOT_HOLD_ITEM => first_of(all, &["hold_mainhand"]),
         SLOT_SWING => first_of(all, &["swing:sword", "sword_attack_01", "swing_hand", "swing:fishing_rod"]),
         SLOT_USE_BOW => first_of(all, &["use_mainhand:bow", "hold_mainhand:bow"]),
         SLOT_USE_EAT => first_of(all, &["use_mainhand:eat", "use_mainhand:drink"]),
