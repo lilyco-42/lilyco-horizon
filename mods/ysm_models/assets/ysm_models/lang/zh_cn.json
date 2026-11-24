@@ -1,7 +1,0 @@
-{
-  "key.ysm_models.gesture_wheel": "YSM 角色引擎：动作表情轮盘 (G)",
-  "key.ysm_models.switch_model": "YSM 角色引擎：打开/切换 3D 角色模型 (Y)",
-  "ysm_models.hud.synced": "YSM 多人模型状态已同步",
-  "ysm_models.setting.gesture": "当前待机动作",
-  "ysm_models.setting.persona": "当前角色预设"
-}

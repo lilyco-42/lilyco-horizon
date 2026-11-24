@@ -1,8 +1,0 @@
-{
-  "key.replay_recorder.add_keyframe": "ReplayMod: Add Camera Keyframe (B)",
-  "key.replay_recorder.toggle_rec": "ReplayMod: Toggle Recording / Cloud Sync (R)",
-  "replay_recorder.setting.disk_guard": "Disk Free-Space Guard",
-  "replay_recorder.setting.mode": "Replay & Dual-POV Recording Mode",
-  "replay_recorder.setting.purge_policy": "Post-Upload Cleanup Policy",
-  "replay_recorder.setting.segment_seconds": "Video Segment Duration"
-}

@@ -1,8 +1,0 @@
-{
-  "key.replay_recorder.add_keyframe": "录像回放：添加镜头关键帧书签 (B)",
-  "key.replay_recorder.toggle_rec": "录像回放：开始/停止录制并检查云端同步 (R)",
-  "replay_recorder.setting.disk_guard": "磁盘剩余空间保护阈值",
-  "replay_recorder.setting.mode": "录像与双视角录制模式",
-  "replay_recorder.setting.purge_policy": "夸克网盘上传后自动清理策略",
-  "replay_recorder.setting.segment_seconds": "视频分段时长"
-}

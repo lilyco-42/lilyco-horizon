@@ -1,9 +1,0 @@
-[package]
-name = "mod-schematics"
-version = "2.0.1"
-edition = "2024"
-license = "MIT"
-publish = false
-
-[dependencies]
-horizon-mod-api = { path = ".horizon/sdk/api/crates/horizon-mod-api" }
