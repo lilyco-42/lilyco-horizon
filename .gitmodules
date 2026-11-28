@@ -1,0 +1,28 @@
+[submodule "clients/horizon-ohos"]
+	path = clients/horizon-ohos
+	url = https://github.com/Lyco-team/horizon-ohos-port.git
+	branch = ohos-port
+[submodule "clients/horizon-android"]
+	path = clients/horizon-android
+	url = https://github.com/Lyco-team/horizon-android-port.git
+	branch = starling-v090
+[submodule "mods/ysm_models"]
+	path = mods/ysm_models
+	url = https://github.com/lilyco-42/horizon-mod-ysm.git
+	branch = main
+[submodule "mods/i18n_mod"]
+	path = mods/i18n_mod
+	url = https://github.com/lilyco-42/horizon-mod-i18n.git
+	branch = main
+[submodule "mods/schematics_mod"]
+	path = mods/schematics_mod
+	url = https://github.com/lilyco-42/horizon-mod-schematics.git
+	branch = main
+[submodule "mods/replay_mod"]
+	path = mods/replay_mod
+	url = https://github.com/lilyco-42/horizon-mod-replay.git
+	branch = main
+[submodule "mods/skins-3d_mod"]
+	path = mods/skins-3d_mod
+	url = https://github.com/lilyco-42/horizon-mod-skins-3d.git
+	branch = main
