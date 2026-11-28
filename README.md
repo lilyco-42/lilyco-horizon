@@ -80,3 +80,7 @@ cargo test --workspace
 ## Why submodules
 
 The game clients and each mod are large, fast-moving, independently released codebases on different upstreams (Horizon official, Starling, per-mod repos). Keeping them as submodules lets this repo stay a small, auditable umbrella that pins exact known-good revisions, shares the `ysm-native-port` compiler, and gives one build entry point — without merging incompatible Cargo workspaces or forcing a 400 MB checkout on tools-only users.
+
+## Upstream notes
+
+`sunrise-org/sunrise` is the renamed successor of the original `horizon-rust/horizon` upstream (which now 404s). A code-level audit of migrating our mobile ports and `ysm_models` onto it is in [docs/SUNRISE_MIGRATION_AUDIT.md](docs/SUNRISE_MIGRATION_AUDIT.md). Verdict: keep it as a reference/patch source, not a new upstream — Sunrise has no Android/OpenHarmony support and rewrites the native mod API.
