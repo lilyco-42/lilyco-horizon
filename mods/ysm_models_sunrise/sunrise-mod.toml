@@ -1,0 +1,11 @@
+id = "ysm_models"
+name = "ysm models"
+version = "0.1.0"
+description = ""
+authors = []
+# A native mod: Rust in src/, compiled by `cargo sunrise-mod build` against the game build [native] pins, beside data/ and assets/.
+side = "both"
+
+[native]
+game = "26.3"
+sunrise = "94256510f74e6843754e0a93fd9e4da7e45b1056"

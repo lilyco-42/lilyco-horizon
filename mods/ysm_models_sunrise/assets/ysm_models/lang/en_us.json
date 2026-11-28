@@ -1,0 +1,7 @@
+{
+  "key.ysm_models.gesture_wheel": "YSM Engine: Gesture & Expression Wheel (G)",
+  "key.ysm_models.switch_model": "YSM Engine: Switch 3D Character Model (Y)",
+  "ysm_models.hud.synced": "YSM multiplayer state synchronized",
+  "ysm_models.setting.gesture": "Active Idle Gesture",
+  "ysm_models.setting.persona": "Active Persona Preset"
+}

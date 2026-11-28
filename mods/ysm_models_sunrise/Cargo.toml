@@ -1,0 +1,15 @@
+[package]
+name = "mod-ysm_models"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+# The pinned SDK's API crate, fetched into .sunrise/sdk/ by any `cargo sunrise-mod` command. Any other
+# registry dependency is pinned in Cargo.lock by `cargo sunrise-mod build`.
+sunrise-mod-api = { path = ".sunrise/sdk/api/crates/sunrise-mod-api" }
+
+png = "0.18"
+serde_json = "1"
+
+# Standalone Sunrise mod project; keep it out of the umbrella Cargo workspace.
+[workspace]
